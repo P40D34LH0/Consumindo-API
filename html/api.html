@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORA DE OURO!</title>
+    <script src="../js/api.js"></script>
+    <link rel="stylesheet" href="../css/api.css">
+</head>
+
+<body>
+
+    <header id="main-header"></header>
+
+    <main>
+        <section id="cotacao">
+            <h2>Cotação e Conversor</h2>
+            <p id="valor-dolar">Carregando cotação...</p>
+
+            <div class="converter-box">
+                <div class="input-group">
+                    <label>Valor em Real (R$):</label>
+                    <input type="number" id="input-real" placeholder="Ex: 100.00">
+                    <button onclick="converterParaDolar()">Converter para Dólar</button>
+                    <p id="res-dolar" class="resultado"></p>
+                </div>
+
+                <div class="input-group">
+                    <label>Valor em Dólar (US$):</label>
+                    <input type="number" id="input-dolar" placeholder="Ex: 20.00">
+                    <button onclick="converterParaReal()">Converter para Real</button>
+                    <p id="res-real" class="resultado"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="dog-api">
+            <h2>Cachorros mais que dourados!</h2>
+            <img id="dog-image" src="" alt="Cachorro" style="max-width: 100%; display: none;">
+            <button onclick="carregarCachorro()">Novo cachorro</button>
+        </section>
+
+        <section id="paises">
+            <h2>O PAÍS MAIS DOURADO DESSE MUNDO!</h2>
+            <div id="info-pais">Carregando...</div>
+        </section>
+    </main>
+</body>
+
+</html>
