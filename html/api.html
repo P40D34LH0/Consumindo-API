@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HORA DE OURO!</title>
-    <script src="../js/api.js"></script>
+    <title>Hora Dourada!</title>
     <link rel="stylesheet" href="../css/api.css">
+    <script src="../js/api.js"></script>
 </head>
-
 <body>
 
     <header id="main-header"></header>
 
     <main>
-        <section id="cotacao">
-            <h2>Cotação e Conversor</h2>
-            <p id="valor-dolar">Carregando cotação...</p>
+        <section id="clima">
+            <h2>Status Do Clima</h2>
+            <div class="input-group">
+                <input type="text" id="cidade-input" placeholder="Ex: Londres, Tokyo...">
+                <button onclick="buscarClima()">Ver Clima</button>
+            </div>
+            <div id="resultado-clima" class="resultado-box">
+                <p>Aguardando Busca...</p>
+            </div>
+        </section>
 
+        <section id="cotacao">
+            <h2>Convertor De Dinheiro</h2>
+            <p id="valor-dolar">Buscando Cotação...</p>
+            
             <div class="converter-box">
                 <div class="input-group">
-                    <label>Valor em Real (R$):</label>
-                    <input type="number" id="input-real" placeholder="Ex: 100.00">
+                    <input type="number" id="input-real" placeholder="R$ para US$">
                     <button onclick="converterParaDolar()">Converter para Dólar</button>
                     <p id="res-dolar" class="resultado"></p>
                 </div>
 
                 <div class="input-group">
-                    <label>Valor em Dólar (US$):</label>
-                    <input type="number" id="input-dolar" placeholder="Ex: 20.00">
+                    <input type="number" id="input-dolar" placeholder="US$ para R$">
                     <button onclick="converterParaReal()">Converter para Real</button>
                     <p id="res-real" class="resultado"></p>
                 </div>
             </div>
         </section>
 
-        <section id="dog-api">
-            <h2>Cachorros mais que dourados!</h2>
-            <img id="dog-image" src="" alt="Cachorro" style="max-width: 100%; display: none;">
-            <button onclick="carregarCachorro()">Novo cachorro</button>
+        <section id="paises">
+            <h2>Explorador De Países</h2>
+            <div class="input-group">
+                <input type="text" id="pais-input" placeholder="Nome do país (em inglês)">
+                <button onclick="buscarDadosPais()">Buscar País</button>
+            </div>
+            <div id="info-pais" class="resultado-box">
+                <p>Digite um país acima.</p>
+            </div>
         </section>
 
-        <section id="paises">
-            <h2>O PAÍS MAIS DOURADO DESSE MUNDO!</h2>
-            <div id="info-pais">Carregando...</div>
+        <section id="dog-api">
+            <h2>Cachorros De Ouro!</h2>
+            <img id="dog-image" src="" alt="Cachorro" style="max-width: 100%; display: none;">
+            <button onclick="carregarCachorro()">Outro Cachorro De Ouro</button>
         </section>
     </main>
-</body>
 
+</body>
 </html>
